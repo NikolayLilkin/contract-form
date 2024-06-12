@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    font-family: Karla,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(148, 38%, 91%);
+}
+
+h3 {
+    color:hsl(187, 24%, 22%);
+    font-weight: 700;
+}
+
+.reservation-form {
+    background-color: #FFFFFF;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;
+    min-width: 288px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-class {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 700px) {
+    .name-class {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.name-class > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 242px;
+}
+
+.name-class > div input[type=text] {
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    height: 36px;
+}
+
+.email-class {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-class > input[type=text] {
+    margin-top: 8px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    height: 32px;
+}
+
+.query-class {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 700px) {
+    .query-class {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+.query-class > .general-enquiry, .support-request {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 24px 8px 16px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border: solid 1px rgba(118, 118, 118);
+    border-radius: 5px;
+    min-width: 200px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.message-class {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-class > textarea {
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    min-height: 72px;
+    resize: vertical;
+    font-family: Karla, -apple-system, system-ui;
+}
+
+.message-class > textarea:focus-visible {
+    outline: 1px solid hsl(169, 82%, 27%);
+    border-radius: 5px;
+}
+
+.button-class {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-class > * {
+    font-size: 1em;
+    background-color: hsl(169, 82%, 27%);
+    color: #FFFFFF;
+    display: flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: hsl(169, 82%, 27%);
+    border-style: solid;
+    height: 36px;
+}
+
+.button-class > *:active {
+    border-color: hsl(172, 79%, 8%);
+}
+
+.query-label-class {
+    margin-bottom: 8px;
+}
+
+.consent-message-class > input[type=checkbox] {
+    transform: scale(1.25);
+    margin-right: 8px;
+}
+
+input:focus-visible {
+    outline: 1px solid hsl(169, 82%, 27%);
+    border-radius: 5px;
+}
+
+input[type=checkbox], input[type=radio] {
+    accent-color: hsl(169, 82%, 27%);
+}
+
+.error {
+    visibility: hidden;
+    color: hsl(0, 66%, 54%);
+    font-size: xx-small;
+    margin: 4px;
+    word-wrap: break-word;
+    width: 234px;
+}
+
+.selected {
+    border: 1px solid hsl(172, 79%, 8%) !important;
+    background-color: hsl(148, 38%, 91%) !important;
+}
+
+.popup {
+    position: absolute;
+    top: 5%;
+    visibility: hidden;
+    background-color: hsla(171, 80%, 8%, 0.90);
+    padding: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.popup-header > h4 {
+    margin: 0.5em;
+}
+
+.popup > p {
+    font-size: smaller;
+    margin: 0;
+}
+
+
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
